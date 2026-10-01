@@ -1,0 +1,11 @@
+# Coolify deployment. DATABASE_URL points at the Coolify-managed PostgreSQL
+# (set it in Coolify's Environment Variables). Domain: opnamo.efrino.web.id
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - DATABASE_URL=${DATABASE_URL}
+      - DEMO=${DEMO:-1}
+    expose: ["3000"]

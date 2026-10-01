@@ -1,0 +1,21 @@
+{
+  "name": "opnamo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Stock-taking SaaS for small warehouses: QR tags, phone scanning, variance reports.",
+  "type": "module",
+  "main": "src/server.js",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test --test-concurrency=1 test/*.test.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "exceljs": "^4.4.0",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.7.0",
+    "helmet": "^8.3.0",
+    "pg": "^8.23.1"
+  }
+}
