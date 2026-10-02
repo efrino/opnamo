@@ -7,7 +7,7 @@ export async function render(root, { me }) {
     const trial = me.plan === 'trial' ? Math.max(0, Math.ceil((new Date(me.trial_ends) - Date.now()) / 86400e3)) : null;
     root.innerHTML = `
       <div class="page-head"><div><h1>Tim & Lokasi</h1><p>${esc(me.company_name)}</p></div></div>
-      ${trial !== null ? `<div class="banner">Paket Trial · sisa <b>${trial} hari</b>. Untuk berlangganan, hubungi <a href="mailto:efrinowep@gmail.com?subject=Langganan%20Opnamo" style="text-decoration:underline">efrinowep@gmail.com</a>.</div>` : ''}
+      ${trial !== null ? `<div class="banner">Paket Trial · sisa <b>${trial} hari</b>. Untuk berlangganan, hubungi <a href="https://wa.me/6285184084989?text=Halo%2C%20saya%20ingin%20berlangganan%20Opnamo" target="_blank" rel="noopener" style="text-decoration:underline">WhatsApp 0851-8408-4989</a>.</div>` : ''}
       <div class="row" style="justify-content:space-between;margin-bottom:12px"><h2 style="font-size:18px">Anggota tim</h2><button class="btn primary sm" id="addU">＋ Anggota</button></div>
       <div class="tbl-wrap" style="margin-bottom:30px"><table><thead><tr><th>Nama</th><th class="hide-m">Email</th><th>Peran</th><th>Status</th><th></th></tr></thead><tbody>
         ${users.map(u => `<tr data-id="${u.id}"><td>${esc(u.name)}${u.id === me.id ? ' <span class="badge">Anda</span>' : ''}<div class="muted" style="font-size:12px">${fmtDate(u.created_at)}</div></td>

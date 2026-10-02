@@ -41,7 +41,7 @@ export async function requireUser(req, res, next) {
     WHERE s.token = $1 AND s.expires_at > now() AND u.active`, [hashToken(t)]);
   if (!u) throw new HttpError(401, 'Sesi berakhir, silakan login lagi.');
   // Expired trials keep read access so customers can still export their data.
-  if (u.expired && req.method !== 'GET') throw new HttpError(402, 'Masa trial berakhir. Hubungi kami untuk berlangganan.');
+  if (u.expired && req.method !== 'GET') throw new HttpError(402, 'Masa trial berakhir. Hubungi WhatsApp 0851-8408-4989 untuk berlangganan.');
   req.user = u;
   next();
 }
