@@ -66,3 +66,17 @@ main h2 { font-size: clamp(28px, 4.2vw, 46px); letter-spacing: -.03em; line-heig
   main section { padding: 52px 16px; }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; } .reveal { opacity: 1; transform: none; } }
+/* ROI calculator */
+.roi { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: stretch; }
+.roi .inputs, .roi .result { border: 1px solid var(--line); border-radius: 20px; padding: 24px; background: var(--card); }
+.roi .inputs { display: grid; gap: 18px; }
+.roi label { display: grid; gap: 6px; font-size: 14px; color: var(--muted); }
+.roi label .row2 { display: flex; justify-content: space-between; }
+.roi label output { font-family: var(--mono); color: var(--text); font-weight: 600; }
+.roi input[type=range] { width: 100%; accent-color: #7c5cff; }
+.roi .result { display: grid; gap: 14px; align-content: center; border-color: rgba(124,92,255,.5); background: rgba(124,92,255,.08); }
+.roi .big { font-size: clamp(36px, 5vw, 54px); font-weight: 700; letter-spacing: -.03em; line-height: 1; }
+.roi .line { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px dashed var(--line); font-size: 15px; }
+.roi .line span:first-child { color: var(--muted); }
+.roi .note { font-size: 12.5px; color: var(--muted); }
+@media (max-width: 860px) { .roi { grid-template-columns: 1fr; } }

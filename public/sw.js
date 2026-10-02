@@ -1,5 +1,5 @@
 // App-shell cache so the scanner opens offline. API calls always go to the network.
-const VERSION = 'opnamo-v4';
+const VERSION = 'opnamo-v5';
 const SHELL = ['/app.html', '/css/app.css', '/js/app.js', '/js/api.js', '/js/ui.js', '/js/offline.js',
   '/js/views/auth.js', '/js/views/dashboard.js', '/js/views/items.js', '/js/views/print.js', '/js/views/stocktakes.js',
   '/js/views/stocktake.js', '/js/views/scan.js', '/js/views/team.js', '/vendor/jsQR.js', '/vendor/qrcode.js', '/icons/icon.svg', '/manifest.webmanifest'];
